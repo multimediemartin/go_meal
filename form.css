@@ -1,0 +1,103 @@
+main {
+	display: flex;
+	padding: 50px 0;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+}
+
+.intro {
+	text-align: center;
+}
+
+form {
+	display: flex;
+	width: 100%;
+	padding: 10px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	border: 1px solid var(--primary);
+	background: var(--tertiary);
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	width: 100%;
+}
+
+label {
+	color: var(--primary);
+}
+
+textarea,
+input,
+select {
+	font-family: "sligoil", serif;
+	background: var(--tertiary);
+	padding: 2px 5px;
+	border: 1px solid #000;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	border: 1px solid var(--primary);
+	outline: 1px solid var(--primary);
+}
+
+select {
+	width: max-content;
+}
+
+.add-button {
+	background: var(--tertiary);
+	text-align: start;
+	padding: 0 5px;
+	width: max-content;
+	border: 1px solid #000;
+	span {
+		color: var(--secondary);
+	}
+}
+.add-button:hover,
+.remove-button:hover {
+	scale: 1.05;
+}
+
+.input-wrapper {
+	display: flex;
+	input,
+	textarea {
+		width: 100%;
+	}
+}
+.remove-button {
+	background: var(--tertiary);
+	color: var(--primary);
+	width: 20px;
+}
+
+.knaph {
+	align-self: stretch;
+	justify-content: end;
+}
+.submit-button {
+	background: var(--tertiary);
+	color: var(--primary);
+	border: 1px solid var(--primary);
+	padding: 10px 20px;
+	cursor: pointer;
+}
+.submit-button:hover {
+	background-color: var(--secondary);
+	color: var(--tertiary);
+}
+
+@media (min-width: 500px) {
+	form {
+		max-width: 500px;
+	}
+}
