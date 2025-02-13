@@ -1,11 +1,47 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 img {
-  width: 100%;
-  height: auto;
-  display: block;
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+:root {
+	--primary: #dd191f;
+	--secondary: #a0bd1f;
+	--tertiary: #fffef1;
+	--quinary: #fcdcc5;
+	--bgcolor: #f5e3d0;
+	scroll-behavior: smooth;
+}
+
+html {
+	background-color: var(--bgcolor);
+}
+
+h1,
+h2 {
+	font-family: "Notable", serif;
+	color: var(--secondary);
+	cursor: default;
+}
+
+h3,
+h4,
+h5,
+p {
+	font-family: "sligoil", serif;
+	color: var(--secondary);
+	cursor: default;
+}
+
+a {
+	font-family: "sligoil", serif;
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
 }
