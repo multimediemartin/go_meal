@@ -1,0 +1,144 @@
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+/* header */
+.header {
+	border: 1px solid var(--rd, #dd191f);
+	background: var(--tertiary);
+	justify-content: space-between;
+	padding: 0 10px;
+}
+
+.headerlogostor {
+	height: 70px;
+	width: max-content;
+}
+.headerlogolille {
+	display: none;
+}
+
+nav {
+	gap: 20px;
+	height: 80px;
+}
+
+.headerul {
+	list-style: none;
+	height: 100%;
+	a,
+	li {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+	a {
+		padding: 0px 10px;
+		border-bottom: 4px solid transparent;
+	}
+	a:hover {
+		border-bottom: 4px solid var(--secondary);
+		color: var(--secondary);
+	}
+}
+
+.headerul li a.active {
+	border-bottom: 4px solid var(--secondary);
+	color: var(--secondary);
+}
+
+.headercta {
+	border: 2px solid var(--primary);
+	font-family: "Notable";
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-align: center;
+	padding: 5px 10px;
+}
+.headercta:hover {
+	background: var(--secondary);
+	a {
+		color: var(--tertiary);
+	}
+}
+/* burgermenu */
+.burgermenu {
+	display: none;
+}
+.burger {
+	display: flex;
+	cursor: pointer;
+	flex-direction: column;
+	gap: 8px;
+}
+.burger span {
+	display: block;
+	width: 40px;
+	height: 3px;
+	background-color: var(--primary);
+	transition: transform 0.3s ease;
+}
+
+/* animerer burger-ikonet */
+.burger.active span:nth-child(1) {
+	transform: translateY(11px) rotate(45deg); /* Roter den første streg */
+}
+.burger.active span:nth-child(2) {
+	opacity: 0; /* Skjul den midterste streg */
+}
+.burger.active span:nth-child(3) {
+	transform: translateY(-11px) rotate(-45deg); /* Roter den tredje streg */
+}
+
+/* Styling for burger menu */
+.burgerheaderul {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	top: 80px;
+	right: 0px;
+	background-color: var(--tertiary);
+	border: 0.5px solid var(--primary);
+	list-style: none;
+	width: 100%;
+	a,
+	li {
+		display: flex;
+		height: 100%;
+		width: 100%;
+	}
+	a {
+		padding: 10px;
+		border: 0.5px solid var(--primary);
+	}
+	a:hover {
+		background: var(--secondary);
+		color: var(--tertiary);
+	}
+}
+
+.burgerheaderul li a.active {
+	background: var(--secondary);
+	color: var(--tertiary);
+}
+.burgerheaderul.active {
+	display: flex;
+}
+
+/* mobil version */
+@media (max-width: 900px) {
+	.headerlogostor,
+	.headerul,
+	.headercta {
+		display: none;
+	}
+	.headerlogolille {
+		display: flex;
+		height: 40px;
+		width: max-content;
+	}
+	.burgermenu {
+		display: flex;
+	}
+}

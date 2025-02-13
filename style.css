@@ -26,7 +26,7 @@ html {
 h1,
 h2 {
 	font-family: "Notable", serif;
-	color: var(--secondary);
+	color: var(--primary);
 	cursor: default;
 }
 
@@ -39,9 +39,10 @@ p {
 	cursor: default;
 }
 
-a {
-	font-family: "sligoil", serif;
-	color: inherit;
+a,
+li {
+	font-family: inherit;
+	color: var(--primary);
 	text-decoration: none;
 	cursor: pointer;
 }
