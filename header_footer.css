@@ -3,12 +3,42 @@
 	align-items: center;
 }
 
-/* header */
-.header {
+/* header footer */
+.header,
+.footer {
 	border: 1px solid var(--rd, #dd191f);
 	background: var(--tertiary);
 	justify-content: space-between;
 	padding: 0 10px;
+}
+
+.footer {
+	padding: 10px;
+	gap: 10px;
+}
+
+.footerlogo {
+	height: 55px;
+	img {
+		height: 100%;
+	}
+}
+.footerinfo {
+	flex-direction: column;
+	align-items: end;
+}
+
+@media (max-width: 700px) {
+	.footer {
+		flex-direction: column;
+		align-items: start;
+	}
+	.footerinfo {
+		align-items: start;
+	}
+	.footerlogo {
+		height: 50px;
+	}
 }
 
 .headerlogostor {
