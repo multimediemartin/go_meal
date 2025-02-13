@@ -46,3 +46,12 @@ li {
 	text-decoration: none;
 	cursor: pointer;
 }
+
+.flex {
+	display: flex;
+}
+
+.flexcol {
+	display: flex;
+	flex-direction: column;
+}
