@@ -1,69 +1,75 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 img {
-	width: 100%;
-	height: auto;
-	display: block;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@font-face {
+  font-family: "sligoil";
+  src: url("fonts/Sligoil-Micro.woff2") format("woff2"),
+    url("fonts/Sligoil-Micro.woff") format("woff");
 }
 
 :root {
-	--primary: #dd191f;
-	--secondary: #a0bd1f;
-	--tertiary: #fffef1;
-	--quinary: #fcdcc5;
-	--bgcolor: #f5e3d0;
-	scroll-behavior: smooth;
+  --primary: #dd191f;
+  --secondary: #a0bd1f;
+  --tertiary: #fffef1;
+  --quinary: #fcdcc5;
+  --bgcolor: #f5e3d0;
+  scroll-behavior: smooth;
 }
 
 html {
-	background-color: var(--bgcolor);
+  background-color: var(--bgcolor);
 }
 
 h1,
 h2 {
-	font-family: "Notable", serif;
-	color: var(--primary);
-	cursor: default;
+  font-family: "Notable", serif;
+  color: var(--primary);
+  cursor: default;
 }
 
 h3,
 h4,
 h5,
 p {
-	font-family: "sligoil", serif;
-	color: var(--secondary);
-	cursor: default;
+  font-family: "sligoil", serif;
+  color: var(--secondary);
+  cursor: default;
 }
 
 a,
 li {
-	font-family: inherit;
-	color: var(--primary);
-	text-decoration: none;
-	cursor: pointer;
+  font-family: inherit;
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 .flexcol {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 button {
-	background: var(--tertiary);
-	color: black;
-	border: 1px solid var(--primary);
-	padding: 10px 20px;
-	cursor: pointer;
+  background: var(--tertiary);
+  color: black;
+  border: 1px solid var(--primary);
+  padding: 10px 20px;
+  cursor: pointer;
 }
 button:hover {
-	background-color: var(--secondary);
-	color: var(--tertiary);
+  background-color: var(--secondary);
+  color: var(--tertiary);
 }
