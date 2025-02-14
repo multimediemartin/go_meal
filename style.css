@@ -55,3 +55,15 @@ li {
 	display: flex;
 	flex-direction: column;
 }
+
+button {
+	background: var(--tertiary);
+	color: black;
+	border: 1px solid var(--primary);
+	padding: 10px 20px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: var(--secondary);
+	color: var(--tertiary);
+}

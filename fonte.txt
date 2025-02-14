@@ -1,3 +1,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+
+
+<!DOCTYPE html>
+<html lang="da">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Titel</title>
+		<link rel="stylesheet" href="???.css" />
+	</head>
+	<body>
+		<header id="header-placeholder"></header>
+		<main></main>
+		<footer id="footer-placeholder"></footer>
+		<script src="???.css"></script>
+		<script src="header_footer.js"></script>
+	</body>
+</html>
