@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		const removeButton = document.createElement("button");
 		removeButton.type = "button";
-		removeButton.textContent = "−"; // Minus-symbol
+		removeButton.innerHTML = "<span>-</span>"; // Minus-symbol
 		removeButton.classList.add("remove-button");
 
 		removeButton.addEventListener("click", () => {
