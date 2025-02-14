@@ -17,7 +17,7 @@ img {
 
 :root {
 	--primary: #dd191f;
-	--secondary: #a0bd1f;
+	--secondary: #5a6d0d;
 	--tertiary: #fffef1;
 	--quinary: #fcdcc5;
 	--bgcolor: #f5e3d0;
@@ -46,7 +46,7 @@ p {
 
 a,
 li {
-	font-family: inherit;
+	font-family: "sligoil", serif;
 	color: var(--primary);
 	text-decoration: none;
 	cursor: pointer;
