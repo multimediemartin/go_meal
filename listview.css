@@ -1,0 +1,75 @@
+/* overall layout */
+#main_listview {
+  display: grid;
+  grid-template-columns: 1fr;
+  h1 {
+    grid-row: 1/2;
+    text-align: center;
+  }
+  .categories_flex {
+    grid-row: 2/3;
+    justify-self: center;
+    margin-bottom: 100px;
+  }
+}
+
+/* card */
+#list_flex {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto auto;
+  justify-self: center;
+  gap: 10px 2px;
+}
+
+.list_card {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: 1/4;
+  width: 150px;
+  height: 200px;
+  padding-bottom: 10px;
+  border: 1px solid var(--primary);
+  z-index: 2;
+  background-color: var(--tertiary);
+  h3 {
+    font-family: "Notable", serif;
+    font-size: 0.62rem;
+    color: var(--primary);
+    cursor: default;
+  }
+  h4 {
+    font-size: 0.37rem;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 3px;
+    background-color: var(--tertiary);
+  }
+}
+
+.list_card_img {
+  object-fit: cover;
+  width: 150px;
+  justify-self: start;
+  z-index: 1;
+  border: 1px solid var(--primary);
+  margin: -1px;
+  grid-row: ;
+}
+
+.list_card_title {
+  text-align: center;
+}
+
+.card_category_grid {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+}
+
+.list_card_category {
+  border: 1px solid var(--primary);
+  width: 38.25px;
+  height: 15px;
+  margin-left: -1px;
+}
