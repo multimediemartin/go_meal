@@ -8,9 +8,62 @@
 	</head>
 	<body>
 		<header id="header-placeholder"></header>
-		<main></main>
+		<main class="flexcol">
+			<img class="progress" src="img/progress.svg" alt="" />
+			<div class="kasse">
+				<div class="intro">
+					<h1>Select number of people and recipes</h1>
+					<h3>You can change your selection at any time.</h3>
+				</div>
+				<div class="numberof flexcol">
+					<div class="people flex">
+						<p>Number of people</p>
+						<div class="valgmulighed1 flex"><button>2</button><button>3</button><button>4</button></div>
+					</div>
+					<div class="recipes flex">
+						<p>Number of recipes</p>
+						<div class="valgmulighed2 flex"><button>2</button><button>3</button><button>4</button><button>5</button></div>
+					</div>
+				</div>
+				<div class="prisboks flexcol">
+					<h3>Price Overview</h3>
+					<div class="info flexcol">
+						<p>4 meals for 4 people per week</p>
+						<p>16 servings in total</p>
+					</div>
+					<div class="info flexcol">
+						<div class="info1 flex">
+							<p>Price</p>
+							<p>760,00 kr.</p>
+						</div>
+						<div class="info1 flex">
+							<p>Pris per portion</p>
+							<p><span style="text-decoration-line: line-through">47,50 kr.</span> <span style="color: var(--primary)">31,25 kr.</span></p>
+						</div>
+						<div class="info1 flex">
+							<p>Delivery</p>
+							<p><span style="text-decoration-line: line-through">49,00 kr.</span> <span style="color: var(--primary)">FREE</span></p>
+						</div>
+					</div>
+					<div class="info flexcol">
+						<div class="info1 flex">
+							<p>Total</p>
+							<p><span style="text-decoration-line: line-through">809,00 kr.</span> <span style="color: var(--primary)">500,00 kr.</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="nextbtn flex"><button>Next</button></div>
+			</div>
+			<div class="favboks flexcol">
+				<h3>Which types of recipes do you prefer?</h3>
+				<p>Select a few categories below. You can always change them later.</p>
+				<div class="favknapper flex">
+					<button>MEXICAN</button><button>PAKISTANI</button><button>BRAZILIAN</button><button>MORROCCAN</button><button>ITALIEN</button>
+				</div>
+			</div>
+		</main>
 		<footer id="footer-placeholder"></footer>
-		<script src="buy-box.css"></script>
+		<script src="buy-box.js"></script>
 		<script src="header_footer.js"></script>
 	</body>
 </html>

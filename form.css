@@ -29,6 +29,7 @@ form {
 }
 
 label {
+	font-family: "sligoil", serif;
 	color: var(--primary);
 }
 

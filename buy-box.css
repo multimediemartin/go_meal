@@ -1,0 +1,119 @@
+main {
+	padding: 50px 0;
+	align-items: center;
+	gap: 50px;
+}
+
+.progress {
+	max-width: 1000px;
+}
+
+.kasse {
+	display: flex;
+	width: 100%;
+	padding: 10px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	border: 1px solid var(--primary);
+	background: var(--tertiary);
+}
+
+.intro {
+	text-align: center;
+}
+
+@media (min-width: 500px) {
+	.kasse {
+		max-width: 500px;
+	}
+}
+
+.numberof {
+	width: 100%;
+	gap: 10px;
+	p {
+		color: black;
+	}
+}
+.people,
+.recipes {
+	justify-content: space-between;
+}
+
+.valgmulighed1,
+.valgmulighed2 {
+	width: 200px;
+	button {
+		margin: 0 -1px;
+		flex: 1 1 0;
+	}
+	button:hover {
+		scale: 1.1;
+		background-color: var(--tertiary);
+		color: inherit;
+	}
+	button.active {
+		background-color: var(--secondary);
+		color: var(--tertiary);
+	}
+}
+
+.prisboks {
+	padding: 10px;
+	gap: 20px;
+	width: 100%;
+	border: 1px solid var(--secondary);
+	:last-child {
+		border-bottom: none;
+	}
+	h3 {
+		color: var(--primary);
+	}
+	p {
+		color: black;
+	}
+}
+
+.info {
+	gap: 10px;
+	width: 100%;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--primary);
+}
+
+.info1 {
+	width: 100%;
+	justify-content: space-between;
+}
+
+.nextbtn {
+	width: 100%;
+	justify-content: center;
+	button {
+		color: var(--primary);
+	}
+}
+
+.favboks {
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	gap: 10px;
+	h3 {
+		color: var(--primary);
+	}
+}
+
+.favknapper {
+	padding: 30px 0px;
+	button:hover {
+		scale: 1.1;
+		background-color: var(--tertiary);
+		color: inherit;
+	}
+	button.active {
+		background-color: var(--secondary);
+		color: var(--tertiary);
+	}
+}
