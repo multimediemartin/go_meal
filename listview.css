@@ -5,18 +5,31 @@
   h1 {
     grid-row: 1/2;
     text-align: center;
+    font-size: 1.2rem;
+    padding-top: 50px;
   }
   .categories_flex {
+    display: flex;
+    flex-wrap: wrap;
     grid-row: 2/3;
     justify-self: center;
-    margin-bottom: 100px;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 10px;
+  }
+  button {
+    font-size: 0.7rem;
+    height: 22px;
+    width: 78px;
+    padding: 0px;
+    margin-left: -1px;
   }
 }
 
 /* card */
-#list_flex {
+#list_grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
   justify-self: center;
   gap: 10px 2px;
@@ -28,22 +41,23 @@
   grid-row: 1/4;
   width: 150px;
   height: 200px;
-  padding-bottom: 10px;
   border: 1px solid var(--primary);
   z-index: 2;
   background-color: var(--tertiary);
+  gap: 8px 2px;
   h3 {
     font-family: "Notable", serif;
     font-size: 0.62rem;
     color: var(--primary);
     cursor: default;
+    margin: 0 2px 0 2px;
   }
   h4 {
     font-size: 0.37rem;
     font-weight: 100;
     text-align: center;
-    padding-top: 3px;
     background-color: var(--tertiary);
+    padding-top: 1.5px;
   }
 }
 
@@ -54,22 +68,24 @@
   z-index: 1;
   border: 1px solid var(--primary);
   margin: -1px;
-  grid-row: ;
+  grid-row: 1/2;
 }
 
 .list_card_title {
   text-align: center;
+  grid-row: 2/3;
 }
 
 .card_category_grid {
   display: flex;
   justify-content: center;
   justify-self: center;
+  grid-row: 3/4;
 }
 
 .list_card_category {
   border: 1px solid var(--primary);
   width: 38.25px;
-  height: 15px;
+  height: 13px;
   margin-left: -1px;
 }
