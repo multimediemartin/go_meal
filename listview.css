@@ -1,4 +1,8 @@
 /* overall layout */
+body {
+  display: grid;
+}
+
 #main_listview {
   display: grid;
   grid-template-columns: 1fr;
@@ -9,21 +13,51 @@
     padding-top: 40px;
   }
   .categories_flex {
-    display: flex;
-    flex-wrap: wrap;
     grid-row: 2/3;
     justify-self: center;
     justify-content: center;
-    padding: 10px 40px 40px 40px;
+    padding: 10px 20px 40px 20px;
+  }
+  .categories_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: center;
+    padding: 10px 20px 40px 20px;
+  }
+  button:hover {
+    color: var(--tertiary);
   }
   button {
     font-size: 0.7rem;
-    height: 22px;
-    width: 78px;
+    height: 30px;
+    width: 90px;
+    padding: 0px;
+    margin-left: -1px;
+    margin-bottom: -1px;
+    color: var(--secondary);
+  }
+  .categories_flex_mini {
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px;
+    justify-self: center;
+    justify-content: center;
+    padding: 10px 0px;
+    /* display: none; */
+  }
+  .mini_button {
+    font-size: 0.5rem;
+    height: 24px;
+    width: 70px;
     padding: 0px;
     margin-left: -1px;
     margin-bottom: -1px;
   }
+}
+/* virker ikke :(( */
+#cuisine_button:hover .cuisine_categories {
+  display: block;
 }
 
 /* card */
@@ -45,13 +79,12 @@
   border: 1px solid var(--primary);
   z-index: 2;
   background-color: var(--tertiary);
-  gap: 8px 2px;
+  gap: 7px 2px;
   h3 {
     font-family: "Notable", serif;
     font-size: 0.62rem;
     color: var(--primary);
     cursor: default;
-    margin: 0 2px 0 2px;
   }
   h4 {
     font-size: 0.37rem;
@@ -65,6 +98,7 @@
 .list_card_img {
   object-fit: cover;
   width: 150px;
+  height: 150px;
   justify-self: start;
   z-index: 1;
   border: 1px solid var(--primary);
@@ -75,6 +109,7 @@
 .list_card_title {
   text-align: center;
   grid-row: 2/3;
+  height: 25px;
 }
 
 .card_category_grid {
@@ -93,9 +128,14 @@
 
 @media (min-width: 500px) {
   #main_listview {
+    max-width: 500px;
+    justify-self: center;
     h1 {
       font-size: 2rem;
       padding-top: 40px;
+    }
+    .categories_flex_mini {
+      width: 400px;
     }
   }
 
@@ -120,27 +160,33 @@
       margin: 0 2px 0 2px;
     }
     h4 {
-      font-size: 0.37rem;
+      font-size: 0.5rem;
       font-weight: 100;
       text-align: center;
       background-color: var(--tertiary);
-      padding-top: 1.5px;
+      padding-top: 2.5px;
     }
   }
 
   .list_card_img {
     width: 210px;
+    height: 210px;
+  }
+
+  .list_card_title {
+    height: 42px;
   }
 
   .list_card_category {
     width: 53.25px;
-    height: 13px;
+    height: 17px;
     margin-left: -1px;
   }
 }
 
 @media (min-width: 900px) {
   #main_listview {
+    max-width: 900px;
     h1 {
       font-size: 3rem;
       padding-top: 40px;
@@ -155,11 +201,22 @@
     }
     button {
       font-size: 1rem;
-      height: 30px;
-      width: 130px;
+      height: 40px;
+      width: 155px;
       padding: 0px;
       margin-left: -1px;
       margin-bottom: -1px;
+    }
+    .mini_button {
+      font-size: 0.8rem;
+      height: 34px;
+      width: 120px;
+      padding: 0px;
+      margin-left: -1px;
+      margin-bottom: -1px;
+    }
+    .categories_flex_mini {
+      width: 600px;
     }
   }
   #list_grid {
