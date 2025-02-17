@@ -9,15 +9,7 @@ function getData() {
 	console.log("getData");
 	fetch(url)
 		.then((response) => response.json())
-		.then((data) => {
-			console.log("Modtaget data:", data); // Debugging
-			if (data.recipes && Array.isArray(data.recipes)) {
-				showRecipes(data.recipes);
-			} else {
-				console.error("Fejl: Ingen opskrifter fundet i data!", data);
-			}
-		})
-		.catch((error) => console.error("Fejl ved hentning af data:", error));
+		.then((data) => showRecipes(data.recipes));
 }
 
 function showRecipes(recipes) {

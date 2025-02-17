@@ -25,8 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		const navLinks = document.querySelectorAll(".headerul li a, .burgerheaderul li a");
 		console.log(`Antal links fundet: ${navLinks.length}`);
 		navLinks.forEach((link) => {
-			console.log(`Link pathname: ${link.pathname}`);
-			console.log(`Aktuel side: ${window.location.pathname}`);
 			if (link.pathname === window.location.pathname) {
 				console.log(`Match fundet: ${link.href}`);
 				link.classList.add("active");
