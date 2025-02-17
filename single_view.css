@@ -3,83 +3,123 @@
   position: relative;
   margin-bottom: 2vh;
   border-bottom: solid 2px var(--primary);
-}
+  overflow: hidden;
 
-.opskrift_navn img,
-.opskrift_navn h1 {
-  grid-row-start: 1;
-  grid-column-start: 1;
-}
+  h1,
+  img {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
 
-.opskrift_navn img {
-  filter: blur(4px);
-  height: 40vh;
-  width: 100vw;
-  object-fit: cover;
-}
+  h1 {
+    color: var(--tertiary);
+    -webkit-text-stroke: 1px var(--primary);
+    font-size: 3rem;
+    place-self: center;
+    text-align: center;
+    text-wrap: pretty;
+    max-width: 90vw;
+    z-index: 1;
+  }
 
-.opskrift_navn h1 {
-  color: var(--tertiary);
-  -webkit-text-stroke: 1px var(--primary);
-  font-size: 3rem;
-  place-self: center;
-  z-index: 1;
+  img {
+    filter: blur(4px);
+    height: 40vh;
+    width: 100vw;
+    object-fit: cover;
+  }
 }
 
 .tilbage {
-  color: var(--secondary);
-  font-size: 1.5rem;
-  margin-left: 2vw;
+  left: 5vw;
+  position: absolute;
+  a {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    display: block;
+  }
+  :hover {
+    text-shadow: 0 4px 8px;
+    scale: 1.2;
+  }
 }
 
-.tilbage:hover {
-  transform: scale(1.2);
-  text-shadow: 0 4px 8px;
+.grid1 {
+  padding-top: 3rem;
 }
 
 .grid_1to2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   place-self: center;
-  gap: 25vw;
-  margin-block: 3vh;
   width: 80vw;
 }
 
 h3 {
   font-size: 2rem;
+  margin-block: auto;
+}
+
+.infobox {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 3;
+  gap: 5px;
+  min-width: 60vw;
 }
 
 .info_buttons {
   display: flex;
-  justify-content: space-evenly;
-  gap: 2vw;
-}
-
-.info_buttons p {
+  justify-content: center;
+  align-items: center;
   background-color: var(--primary);
-  color: var(--tertiary);
-  padding: 3px 9px;
+  p {
+    color: var(--tertiary);
+    text-align: center;
+    padding-block: 3px;
+  }
 }
 
-.rating p {
-  place-self: center;
+.rating {
   background-color: var(--secondary);
-  color: var(--tertiary);
-  margin-top: 6px;
-  padding: 3px 8cqw;
+  grid-column: span 3;
+  p {
+    color: var(--tertiary);
+    text-align: center;
+    place-self: center;
+    padding-block: 3px;
+  }
 }
 
-.ingrediens_container,
-.fremgang_container {
+#ingrediens_container,
+#fremgang_container {
   background-color: var(--tertiary);
   border: solid 2px var(--primary);
   padding: 2rem;
   width: 75vw;
   place-self: center;
-  margin-block: 1.5rem;
+  margin: 1vh 0 3vh;
+  li {
+    margin-block: 0.75vh;
+    list-style: none;
+  }
 }
 
-.fremgang_container p {
-  color: var(--primary);
+#ingrediens_container li::before {
+  content: "-";
+  margin-right: 5px;
+}
+
+#fremgang_container li {
+  list-style: none;
+}
+
+@media (min-width: 575px) {
+  .grid_1to2 {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    gap: 5vw;
+  }
+
+  .infobox {
+    width: auto;
+  }
 }
