@@ -1,0 +1,85 @@
+.opskrift_navn {
+  display: grid;
+  position: relative;
+  margin-bottom: 2vh;
+  border-bottom: solid 2px var(--primary);
+}
+
+.opskrift_navn img,
+.opskrift_navn h1 {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.opskrift_navn img {
+  filter: blur(4px);
+  height: 40vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.opskrift_navn h1 {
+  color: var(--tertiary);
+  -webkit-text-stroke: 1px var(--primary);
+  font-size: 3rem;
+  place-self: center;
+  z-index: 1;
+}
+
+.tilbage {
+  color: var(--secondary);
+  font-size: 1.5rem;
+  margin-left: 2vw;
+}
+
+.tilbage:hover {
+  transform: scale(1.2);
+  text-shadow: 0 4px 8px;
+}
+
+.grid_1to2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-self: center;
+  gap: 25vw;
+  margin-block: 3vh;
+  width: 80vw;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.info_buttons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2vw;
+}
+
+.info_buttons p {
+  background-color: var(--primary);
+  color: var(--tertiary);
+  padding: 3px 9px;
+}
+
+.rating p {
+  place-self: center;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  margin-top: 6px;
+  padding: 3px 8cqw;
+}
+
+.ingrediens_container,
+.fremgang_container {
+  background-color: var(--tertiary);
+  border: solid 2px var(--primary);
+  padding: 2rem;
+  width: 75vw;
+  place-self: center;
+  margin-block: 1.5rem;
+}
+
+.fremgang_container p {
+  color: var(--primary);
+}
