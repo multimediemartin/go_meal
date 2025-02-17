@@ -36,6 +36,7 @@ body {
     margin-left: -1px;
     margin-bottom: -1px;
     color: var(--secondary);
+    text-transform: uppercase;
   }
   .categories_flex_mini {
     display: flex;
@@ -45,7 +46,9 @@ body {
     justify-content: center;
     padding: 10px 0px;
     /* display: none; */
+    /* position: absolute; */
   }
+
   .mini_button {
     font-size: 0.5rem;
     height: 24px;
@@ -56,7 +59,7 @@ body {
   }
 }
 /* virker ikke :(( */
-#cuisine_button:hover .cuisine_categories {
+#cuisine_button:active .cuisine_categories {
   display: block;
 }
 
@@ -92,6 +95,7 @@ body {
     text-align: center;
     background-color: var(--tertiary);
     padding-top: 1.5px;
+    text-transform: uppercase;
   }
 }
 
