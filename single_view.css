@@ -99,17 +99,19 @@ h3 {
   margin: 1vh 0 3vh;
   li {
     margin-block: 0.75vh;
-    list-style: none;
   }
+}
+#ingrediens_container li {
+  list-style: none;
+}
+
+#fremgang_container li {
+  margin-left: 2em;
 }
 
 #ingrediens_container li::before {
   content: "-";
   margin-right: 5px;
-}
-
-#fremgang_container li {
-  list-style: none;
 }
 
 @media (min-width: 575px) {

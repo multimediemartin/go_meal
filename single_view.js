@@ -41,11 +41,11 @@ fetch(`https://dummyjson.com/recipes/${myId}`)
           <h3>Instructions</h3>
         </div>
         <article id="fremgang_container">
-        <ul>
+        <ol>
          ${data.instructions
            .map((instructions) => `<li>${instructions}</li> `)
            .join("")}
-        </ul>
+        </ol>
         </article>
     `;
   });
