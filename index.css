@@ -66,12 +66,12 @@
 
 /* Dropdown-menu for cuisine */
 .categories_flex_mini {
-  display: none; /* Skjult som standard */
+  display: none;
   flex-wrap: wrap;
   width: 280px;
   justify-content: center;
   padding: 10px 0px;
-  gap: 5px; /* Tilføjer mellemrum mellem mini-knapperne */
+  gap: 5px;
 }
 
 .mini_button {
@@ -413,6 +413,9 @@
 
 /* STYLING GENEREL---------------------------------------------------------- */
 .h1_standart {
+  font-size: 11.5vw;
+}
+.h1_highlight {
   font-size: 11.5vw;
 }
 .forside_main h2 {
