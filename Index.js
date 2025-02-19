@@ -8,16 +8,44 @@ function getData() {
     .then((response) => response.json())
     .then((data) => {
       allRecipes = data.recipes;
+      renderRecipes();
     });
+}
+
+function renderRecipes() {
+  const gridContainer = document.querySelector(".grid2_1-1-1");
+  gridContainer.innerHTML = allRecipes
+    .slice(0, 3)
+    .map(
+      (recipe) => `
+      <div>
+        <a class="list_card" href="single_view.html?id=${recipe.id}">
+          <img class="list_card_img" src="https://cdn.dummyjson.com/recipe-images/${recipe.id}.webp" alt="picture of dish" />
+          <h3 class="list_card_title">${recipe.name}</h3>
+          <div class="card_category_grid">
+            <h4 class="list_card_category cuisine">${recipe.cuisine}</h4>
+            <h4 class="list_card_category difficulty">${recipe.difficulty}</h4>
+            <h4 class="list_card_category time">${recipe.prepTimeMinutes} MINUTES</h4>
+            <h4 class="list_card_category rating">${recipe.rating} STARS</h4>
+          </div>
+        </a>
+      </div>
+      `
+    )
+    .join("");
 }
 
 // function til redirect to listview.html med gældende filter
 function applyFilter(filterType, value) {
-  window.location.href = `listview.html?${filterType}=${encodeURIComponent(value)}`;
+  window.location.href = `listview.html?${filterType}=${encodeURIComponent(
+    value
+  )}`;
 }
 
 // Cuisine dropdown
-document.querySelector("#cuisine_button").addEventListener("click", toggleCuisineMenu);
+document
+  .querySelector("#cuisine_button")
+  .addEventListener("click", toggleCuisineMenu);
 
 function toggleCuisineMenu() {
   let dropdown = document.querySelector(".categories_flex_mini");
@@ -33,7 +61,6 @@ function toggleCuisineMenu() {
     console.log(cuisines);
 
     // Lav en knap for hver type
-
     cuisines.forEach((cuisine) => {
       const btn = document.createElement("button");
       btn.classList.add("mini_button");
@@ -47,13 +74,19 @@ function toggleCuisineMenu() {
 }
 
 // Difficulty filter
-document.querySelector("#difficulty_button").addEventListener("click", () => applyFilter("difficulty", "Easy"));
+document
+  .querySelector("#difficulty_button")
+  .addEventListener("click", () => applyFilter("difficulty", "Easy"));
 
 // Time sort
-document.querySelector("#time_button").addEventListener("click", () => applyFilter("sort", "time"));
+document
+  .querySelector("#time_button")
+  .addEventListener("click", () => applyFilter("sort", "time"));
 
 // Rating sort
-document.querySelector("#rating_button").addEventListener("click", () => applyFilter("sort", "rating"));
+document
+  .querySelector("#rating_button")
+  .addEventListener("click", () => applyFilter("sort", "rating"));
 
 //  <section class="index_top">
 //         <div class="grid_1-1-1">
