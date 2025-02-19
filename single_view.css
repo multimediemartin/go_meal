@@ -49,8 +49,8 @@
 }
 
 .grid_1to2 {
+  padding-inline: 1.5rem;
   place-self: center;
-  width: 80vw;
 }
 
 h3 {
@@ -63,13 +63,10 @@ h3 {
   grid-template-columns: subgrid;
   grid-column: span 3;
   gap: 5px;
-  min-width: 60vw;
+  width: 80vw;
 }
 
 .info_buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--primary);
   p {
     color: var(--tertiary);
@@ -117,8 +114,8 @@ h3 {
 @media (min-width: 575px) {
   .grid_1to2 {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
-    gap: 5vw;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+    width: 80vw;
   }
 
   .infobox {
