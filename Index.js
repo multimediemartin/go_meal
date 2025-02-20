@@ -37,15 +37,11 @@ function renderRecipes() {
 
 // function til redirect to listview.html med gældende filter
 function applyFilter(filterType, value) {
-  window.location.href = `listview.html?${filterType}=${encodeURIComponent(
-    value
-  )}`;
+  window.location.href = `listview.html?${filterType}=${encodeURIComponent(value)}`;
 }
 
 // Cuisine dropdown
-document
-  .querySelector("#cuisine_button")
-  .addEventListener("click", toggleCuisineMenu);
+document.querySelector("#cuisine_button").addEventListener("click", toggleCuisineMenu);
 
 function toggleCuisineMenu() {
   let dropdown = document.querySelector(".categories_flex_mini");
@@ -74,19 +70,13 @@ function toggleCuisineMenu() {
 }
 
 // Difficulty filter
-document
-  .querySelector("#difficulty_button")
-  .addEventListener("click", () => applyFilter("difficulty", "Easy"));
+document.querySelector("#difficulty_button").addEventListener("click", () => applyFilter("difficulty", "Easy"));
 
 // Time sort
-document
-  .querySelector("#time_button")
-  .addEventListener("click", () => applyFilter("sort", "time"));
+document.querySelector("#time_button").addEventListener("click", () => applyFilter("sort", "time"));
 
 // Rating sort
-document
-  .querySelector("#rating_button")
-  .addEventListener("click", () => applyFilter("sort", "rating"));
+document.querySelector("#rating_button").addEventListener("click", () => applyFilter("sort", "rating"));
 
 //  <section class="index_top">
 //         <div class="grid_1-1-1">
