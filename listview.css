@@ -1,245 +1,244 @@
 /* overall layout */
 body {
-  display: grid;
+	display: grid;
 }
 
 #main_listview {
-  display: grid;
-  grid-template-columns: 1fr;
-  h1 {
-    grid-row: 1/2;
-    text-align: center;
-    font-size: 1.2rem;
-    padding-top: 40px;
-  }
-  .categories_flex {
-    grid-row: 2/3;
-    justify-self: center;
-    justify-content: center;
-    padding: 10px 20px 40px 20px;
-  }
-  .categories_buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-self: center;
-    justify-content: center;
-    padding: 10px 20px 40px 20px;
-  }
-  button:hover {
-    scale: 1.1;
-    background: var(--tertiary);
-  }
-  button.active {
-    background: var(--secondary);
-    color: var(--tertiary);
-  }
-  button {
-    font-size: 0.7rem;
-    height: 30px;
-    width: 90px;
-    padding: 0px;
-    margin-left: -1px;
-    margin-bottom: -1px;
-    color: var(--secondary);
-    text-transform: uppercase;
-  }
-  .categories_flex_mini {
-    flex-wrap: wrap;
-    width: 280px;
-    justify-self: center;
-    justify-content: center;
-    padding: 10px 0px;
-  }
+	display: grid;
+	grid-template-columns: 1fr;
+	h1 {
+		grid-row: 1/2;
+		text-align: center;
+		font-size: 1.2rem;
+		padding-top: 40px;
+	}
+	.categories_flex {
+		grid-row: 2/3;
+		justify-self: center;
+		justify-content: center;
+		padding: 10px 20px 40px 20px;
+	}
+	.categories_buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-self: center;
+		justify-content: center;
+		padding: 10px 20px 40px 20px;
+	}
+	button:hover {
+		scale: 1.1;
+		background: var(--tertiary);
+	}
+	button.active {
+		background: var(--secondary);
+		color: var(--tertiary);
+	}
+	button {
+		font-size: 0.7rem;
+		height: 30px;
+		width: 90px;
+		padding: 0px;
+		margin-left: -1px;
+		margin-bottom: -1px;
+		color: var(--secondary);
+		text-transform: uppercase;
+	}
+	.categories_flex_mini {
+		flex-wrap: wrap;
+		width: 280px;
+		justify-self: center;
+		justify-content: center;
+		padding: 10px 0px;
+	}
 
-  .mini_button {
-    font-size: 0.5rem;
-    height: 24px;
-    width: 70px;
-    padding: 0px;
-    margin-left: -1px;
-    margin-bottom: -1px;
-  }
+	.mini_button {
+		font-size: 0.5rem;
+		height: 24px;
+		width: 70px;
+		padding: 0px;
+		margin-left: -1px;
+		margin-bottom: -1px;
+	}
 }
 
 /* card */
 #list_grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: min-content;
-  justify-self: center;
-  padding-bottom: 30px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: min-content;
+	justify-self: center;
+	padding-bottom: 30px;
 }
 
 .list_card:hover {
-  scale: 1.1;
-  position: relative;
+	scale: 1.1;
+	position: relative;
 }
 
 .list_card {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: 1/4;
-  width: 150px;
-  height: 200px;
-  margin-left: -1px;
-  border: 1px solid var(--primary);
-  z-index: 10;
-  background-color: var(--tertiary);
-  gap: 7px 2px;
-  transition: scale 0.2s;
-  h3 {
-    font-family: "Notable", serif;
-    font-size: 0.62rem;
-    color: var(--primary);
-    cursor: pointer;
-  }
-  h4 {
-    font-size: 0.37rem;
-    font-weight: 100;
-    text-align: center;
-    background-color: var(--tertiary);
-    padding-top: 1.5px;
-    text-transform: uppercase;
-  }
+	display: grid;
+	grid-template-rows: subgrid;
+	grid-row: 1/4;
+	width: 150px;
+	height: 200px;
+	margin-left: -1px;
+	border: 1px solid var(--primary);
+	z-index: 10;
+	background-color: var(--tertiary);
+	gap: 7px 2px;
+	transition: scale 0.2s;
+	h3 {
+		font-family: "Notable", serif;
+		font-size: 0.62rem;
+		color: var(--primary);
+		cursor: pointer;
+	}
+	h4 {
+		font-size: 0.37rem;
+		font-weight: 100;
+		text-align: center;
+		background-color: var(--tertiary);
+		padding-top: 1.5px;
+		text-transform: uppercase;
+	}
 }
 
 .list_card_img {
-  object-fit: cover;
-  width: 150px;
-  height: 150px;
-  justify-self: start;
-  z-index: 1;
-  border: 1px solid var(--primary);
-  margin: -1px;
-  grid-row: 1/2;
+	object-fit: cover;
+	width: 150px;
+	height: 150px;
+	justify-self: start;
+	z-index: 1;
+	border: 1px solid var(--primary);
+	margin: -1px;
+	grid-row: 1/2;
 }
 
 .list_card_title {
-  text-align: center;
-  grid-row: 2/3;
-  height: 25px;
+	text-align: center;
+	grid-row: 2/3;
+	height: 25px;
 }
 
 .card_category_grid {
-  display: flex;
-  justify-content: center;
-  justify-self: center;
-  grid-row: 3/4;
+	display: flex;
+	justify-content: center;
+	justify-self: center;
+	grid-row: 3/4;
 }
 
 .list_card_category {
-  border: 1px solid var(--primary);
-  width: 38.25px;
-  height: 13px;
-  margin-left: -1px;
+	border: 1px solid var(--primary);
+	width: 38.25px;
+	height: 13px;
+	margin-left: -1px;
 }
 
 @media (min-width: 500px) {
-  #main_listview {
-    max-width: 500px;
-    justify-self: center;
-    h1 {
-      font-size: 2rem;
-      padding-top: 40px;
-    }
-    .categories_flex_mini {
-      width: 400px;
-    }
-  }
+	#main_listview {
+		max-width: 500px;
+		justify-self: center;
+		h1 {
+			font-size: 2rem;
+			padding-top: 40px;
+		}
+		.categories_flex_mini {
+			width: 400px;
+		}
+	}
 
-  #list_grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: min-content;
-    justify-self: center;
-    /* gap: 10px 2px; */
-    padding-bottom: 30px;
-  }
+	#list_grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: min-content;
+		justify-self: center;
+		/* gap: 10px 2px; */
+		padding-bottom: 30px;
+	}
 
-  .list_card {
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: 1/4;
-    width: 210px;
-    height: 280px;
-    gap: 8px 2px;
-    h3 {
-      font-size: 0.8rem;
-      margin: 0 2px 0 2px;
-    }
-    h4 {
-      font-size: 0.5rem;
-      font-weight: 100;
-      text-align: center;
-      background-color: var(--tertiary);
-      padding-top: 2.5px;
-    }
-  }
+	.list_card {
+		display: grid;
+		grid-template-rows: subgrid;
+		grid-row: 1/4;
+		width: 210px;
+		height: 280px;
+		h3 {
+			font-size: 0.8rem;
+			margin: 0 2px 0 2px;
+		}
+		h4 {
+			font-size: 0.5rem;
+			font-weight: 100;
+			text-align: center;
+			background-color: var(--tertiary);
+			padding-top: 2.5px;
+		}
+	}
 
-  .list_card_img {
-    width: 210px;
-    height: 210px;
-  }
+	.list_card_img {
+		width: 210px;
+		height: 210px;
+	}
 
-  .list_card_title {
-    height: 42px;
-  }
+	.list_card_title {
+		height: 42px;
+	}
 
-  .list_card_category {
-    width: 53.25px;
-    height: 17px;
-    margin-left: -1px;
-  }
+	.list_card_category {
+		width: 53.25px;
+		height: 17px;
+		margin-left: -1px;
+	}
 }
 
 @media (min-width: 900px) {
-  #main_listview {
-    max-width: 900px;
-    h1 {
-      font-size: 3rem;
-      padding-top: 40px;
-    }
-    .categories_flex {
-      display: flex;
-      flex-wrap: wrap;
-      grid-row: 2/3;
-      justify-self: center;
-      justify-content: center;
-      padding: 20px 40px 50px 40px;
-    }
-    button {
-      font-size: 1rem;
-      height: 40px;
-      width: 155px;
-      padding: 0px;
-      margin-left: -1px;
-      margin-bottom: -1px;
-    }
-    .mini_button {
-      font-size: 0.8rem;
-      height: 34px;
-      width: 120px;
-      padding: 0px;
-      margin-left: -1px;
-      margin-bottom: -1px;
-    }
-    .categories_flex_mini {
-      width: 600px;
-    }
-  }
-  #list_grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: min-content;
-    justify-self: center;
-    /* gap: 10px 2px; */
-    padding-bottom: 30px;
-  }
+	#main_listview {
+		max-width: 900px;
+		h1 {
+			font-size: 3rem;
+			padding-top: 40px;
+		}
+		.categories_flex {
+			display: flex;
+			flex-wrap: wrap;
+			grid-row: 2/3;
+			justify-self: center;
+			justify-content: center;
+			padding: 20px 40px 50px 40px;
+		}
+		button {
+			font-size: 1rem;
+			height: 40px;
+			width: 155px;
+			padding: 0px;
+			margin-left: -1px;
+			margin-bottom: -1px;
+		}
+		.mini_button {
+			font-size: 0.8rem;
+			height: 34px;
+			width: 120px;
+			padding: 0px;
+			margin-left: -1px;
+			margin-bottom: -1px;
+		}
+		.categories_flex_mini {
+			width: 600px;
+		}
+	}
+	#list_grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: min-content;
+		justify-self: center;
+		/* gap: 10px 2px; */
+		padding-bottom: 30px;
+	}
 }
 
 /* til js af categories */
 
 .chosen_category {
-  background: var(--secondary);
-  color: var(--tertiary);
+	background: var(--secondary);
+	color: var(--tertiary);
 }
